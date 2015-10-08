@@ -27,7 +27,7 @@ var initStickyHeaders = function () {
         stickyHeader.css('width', tableWidth);
         var cellWidths = [];
         for (var i = 0, l = headerCells.length; i < l; i++) {
-            cellWidths[i] = jQuery(headerCells[i]).width();
+            cellWidths[i] = jQuery(headerCells[i]).outerWidth(); //outerWidth also calculates border
         }
         for (var i = 0, l = headerCells.length; i < l; i++) {
             jQuery(stickyHeaderCells[i]).css('width', cellWidths[i]);
